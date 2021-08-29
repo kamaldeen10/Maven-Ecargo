@@ -40,12 +40,18 @@ PDFUtil pu = new PDFUtil();
 	{
 		System.out.println("Both PDF files are NOT Same ");
 	}	
-	
-	
-		
-  
+			
 	}
-
+	
+	@Test(priority=2)
+	public void compareTwoPDFVisually() throws IOException {
+		
+	pu.setCompareMode(CompareMode.VISUAL_MODE);
+	pu.highlightPdfDifference(true);
+	pu.setImageDestinationPath(Resultfile);
+	pu.compare(Expectedpdf, Actualpdf , 1 ,1);
+		
+	}
  	
 	
 	
