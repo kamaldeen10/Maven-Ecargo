@@ -2,13 +2,16 @@ package E2EcargoProject;
 
 import java.io.IOException;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Test;
 
+import com.bkg.base.base;
 import com.testautomationguru.utility.CompareMode;
 import com.testautomationguru.utility.PDFUtil;
 
 public class Pdfutil_Test{
-	
+	public  static Logger log =LogManager.getLogger(base.class.getName());
 PDFUtil pu = new PDFUtil();
 	
 	String Expectedpdf = System.getProperty("user.dir")+"\\Uploadfile\\ExpectedAirwaybill.pdf";
@@ -33,12 +36,14 @@ PDFUtil pu = new PDFUtil();
 	boolean isEquals = pu.compare(Expectedpdf, Actualpdf ,1 ,1);
 	
 	if (isEquals) {
-		System.out.println("Both PDF files Same ");
+		log.info("Both PDF files Same ");
+		
 	}
 		
 	else
 	{
-		System.out.println("Both PDF files are NOT Same ");
+		log.info("Both PDF files are NOT Same ");
+				
 	}	
 			
 	}
@@ -50,10 +55,12 @@ PDFUtil pu = new PDFUtil();
 	pu.highlightPdfDifference(true);
 	pu.setImageDestinationPath(Resultfile);
 	pu.compare(Expectedpdf, Actualpdf , 1 ,1);
+	
+	log.info("Pdf Compare Process Completed");
 		
 	}
  	
-	
+
 	
 }
 

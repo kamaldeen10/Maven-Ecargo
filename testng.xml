@@ -12,7 +12,7 @@
       <class name="E2EcargoProject.EcargoLoginpage_Test"/> 
     <class name="E2EcargoProject.EcargoLoginFail_Test"/>       
        <class name="E2EcargoProject.Booking_Cancel_Test"/>
-       <class name="E2EcargoProject.Pdfutil_Test"/>
+     
        
              </classes>
   </test> <!-- Test -->
