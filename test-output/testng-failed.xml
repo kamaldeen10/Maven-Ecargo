@@ -6,6 +6,19 @@
   </listeners>
   <test thread-count="1" name="Test(failed)">
     <classes>
+      <class name="E2EcargoProject.Pdfutil_Test">
+        <methods>
+          <include name="compareTwoPDFVisually"/>
+          <include name="pdfTest"/>
+        </methods>
+      </class> <!-- E2EcargoProject.Pdfutil_Test -->
+      <class name="E2EcargoProject.EcargoLoginFail_Test">
+        <methods>
+          <include name="teardown"/>
+          <include name="Browser"/>
+          <include name="Intialize"/>
+        </methods>
+      </class> <!-- E2EcargoProject.EcargoLoginFail_Test -->
       <class name="E2EcargoProject.Booking_Cancel_Test">
         <methods>
           <include name="teardown"/>
@@ -13,6 +26,19 @@
           <include name="Intialize"/>
         </methods>
       </class> <!-- E2EcargoProject.Booking_Cancel_Test -->
+      <class name="E2EcargoProject.EcargoLoginpage_Test">
+        <methods>
+          <include name="teardown"/>
+          <include name="Bookingflow"/>
+          <include name="Intialize"/>
+        </methods>
+      </class> <!-- E2EcargoProject.EcargoLoginpage_Test -->
+      <class name="E2EcargoProject.EcargoBkgcreate_Test">
+        <methods>
+          <include name="Bookingflow"/>
+          <include name="Intialize"/>
+        </methods>
+      </class> <!-- E2EcargoProject.EcargoBkgcreate_Test -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [E2EcargoProject] -->
