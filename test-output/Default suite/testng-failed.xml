@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="E2EcargoProject.EcargoLoginFailTest">
+      <class name="E2EcargoProject.EcargoLoginpage_Test">
         <methods>
           <include name="teardown"/>
-          <include name="Browser" invocation-numbers="0"/>
+          <include name="Bookingflow"/>
           <include name="Intialize"/>
         </methods>
-      </class> <!-- E2EcargoProject.EcargoLoginFailTest -->
+      </class> <!-- E2EcargoProject.EcargoLoginpage_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
