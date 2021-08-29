@@ -28,7 +28,7 @@ import com.bkg.bookingpageobjects.Elogin;
 
 
 
-public class EcargoLoginpageTest extends base {
+public class EcargoLoginpage_Test extends base {
 	public    WebDriver driver;
 	public  static Logger log =LogManager.getLogger(base.class.getName());
 	protected static String className;

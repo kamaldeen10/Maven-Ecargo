@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import com.testautomationguru.utility.CompareMode;
 import com.testautomationguru.utility.PDFUtil;
 
-public class Pdfutil {
+public class Pdfutil_Test{
 	
 PDFUtil pu = new PDFUtil();
 	

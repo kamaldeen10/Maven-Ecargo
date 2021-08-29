@@ -40,7 +40,7 @@ import com.bkg.methods.libraries.Download_Uploadfile;
 
 
 
-public class EcargoBkgcreateTest extends base {
+public class EcargoBkgcreate_Test extends base {
 
 	public WebDriver driver;
 	public  static Logger log =LogManager.getLogger(base.class.getName());
