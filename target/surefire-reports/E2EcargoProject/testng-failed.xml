@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [E2EcargoProject]" parallel="tests">
+  <listeners>
+    <listener class-name="E2EcargoProject.Listeners"/>
+  </listeners>
+  <test thread-count="1" verbose="0" name="Test(failed)" parallel="tests">
+    <classes>
+      <class name="E2EcargoProject.EcargoLoginpageTest">
+        <methods>
+          <include name="Intialize"/>
+          <include name="Browser" invocation-numbers="0"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- E2EcargoProject.EcargoLoginpageTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [E2EcargoProject] -->

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="E2EcargoProject"   parallel="false" thread-count="1">
+<listeners>
+<listener class-name="com.bkg.listeners.Listeners"></listener>
+</listeners>
+ 
+  <test  name="Test">
+    <classes> 
+         
+        <class name="E2EcargoProject.EcargoBkgcreateTest"/>            
+        <class name="E2EcargoProject.Booking_Cancel_Test"/>
+  
+             </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

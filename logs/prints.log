@@ -1,0 +1,11 @@
+23:36:53.159 [main] INFO  com.bkg.base.base - Totamt is 912.50
+23:36:53.200 [main] INFO  com.bkg.base.base - VatAmt is 0.00
+23:36:53.225 [main] INFO  com.bkg.base.base - LocalCostAmt is 618.75
+23:36:53.248 [main] INFO  com.bkg.base.base - Commison is 18.75
+23:36:53.271 [main] INFO  com.bkg.base.base - Margin is 312.50   (50.51%)
+23:36:53.302 [main] INFO  com.bkg.base.base - Cost1 is 618.75
+23:36:53.326 [main] INFO  com.bkg.base.base - Sell1 is 912.50
+23:37:16.474 [main] INFO  com.bkg.base.base - Airwaybill copy
+23:37:32.619 [main] INFO  com.bkg.base.base - 077-3222-3225
+23:37:32.619 [main] INFO  com.bkg.base.base - Awb no  Search is Pass
+23:37:35.285 [main] INFO  com.bkg.base.base - sky.admin
