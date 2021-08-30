@@ -64,24 +64,17 @@ public class EcargoLoginpage_Test extends base {
 		return dataProvider.iterator();	
 	}
 	
-	 
-	public   void   LoginCargoApp(HashMap<String, String> testdata) {		
+	@Test(dataProvider = "getData")
+	
+	public   void    Login_PositiveCase_Test(HashMap<String, String> testdata) {		
 		Elogin	login = new Elogin(driver);	
 		login.Username().sendKeys(testdata.get("Username"));
 		login.Password().sendKeys(testdata.get("Password"));
-		login.Login().click();
-		 
+		login.Login().click();		 
 	}
+		
 	
 	
-	@Test(dataProvider = "getData")
-	public  void Bookingflow (HashMap<String, String> testdata) throws IOException, InterruptedException
-	{
-		
-		 LoginCargoApp(testdata);
-		
-		 
-	}
 	
 	@AfterTest
 

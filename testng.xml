@@ -8,12 +8,10 @@
   <test  name="Test">
     <classes> 
              
-        <class name="E2EcargoProject.EcargoBkgcreate_Test"/>
+        <class name="E2EcargoProject.EcargoBkg_Create_Test"/>
       <class name="E2EcargoProject.EcargoLoginpage_Test"/> 
     <class name="E2EcargoProject.EcargoLoginFail_Test"/>       
-       <class name="E2EcargoProject.Booking_Cancel_Test"/>
-     
-       
+       <class name="E2EcargoProject.EcargoBkg_Cancel_Test"/>        
              </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

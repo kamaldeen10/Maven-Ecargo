@@ -44,7 +44,7 @@ public class Download_Uploadfile {
 		robot.keyPress(KeyEvent.VK_V);
 		robot.keyRelease(KeyEvent.VK_CONTROL);
 		robot.keyRelease(KeyEvent.VK_V);
-		Thread.sleep(4000);
+		Thread.sleep(2000);
 		robot.keyPress(KeyEvent.VK_ENTER);
 		robot.keyRelease(KeyEvent.VK_ENTER);		
 		

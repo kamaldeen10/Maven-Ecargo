@@ -1,4 +1,11 @@
-22:14:51.400 [main] INFO  com.bkg.base.base - Driver is Intialized
-22:15:07.309 [main] INFO  com.bkg.base.base - Login Page Navigated
-22:16:48.034 [main] INFO  com.bkg.base.base - Driver is Intialized
-22:17:02.871 [main] INFO  com.bkg.base.base - Login Page Navigated
+19:10:49.320 [main] INFO  com.bkg.base.base - VatAmt is 0.00
+19:10:50.156 [main] INFO  com.bkg.base.base - LocalCostAmt is 618.75
+19:10:50.211 [main] INFO  com.bkg.base.base - Commison is 18.75
+19:10:50.259 [main] INFO  com.bkg.base.base - Margin is 312.50   (50.51%)
+19:10:50.292 [main] INFO  com.bkg.base.base - Cost1 is 618.75
+19:10:50.324 [main] INFO  com.bkg.base.base - Sell1 is 912.50
+19:11:15.722 [main] INFO  com.bkg.base.base - Airwaybill copy
+19:11:30.415 [main] INFO  com.bkg.base.base - 077-3222-3225
+19:11:30.415 [main] INFO  com.bkg.base.base - Awb no  Search is Pass
+19:12:14.384 [main] INFO  com.bkg.base.base - Both PDF files Same 
+19:12:17.032 [main] INFO  com.bkg.base.base - Pdf Compare Process Completed

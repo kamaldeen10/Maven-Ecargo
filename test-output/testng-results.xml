@@ -1,32 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-08-29T22:16:45 IST" name="Default suite" finished-at="2021-08-29T22:17:03 IST" duration-ms="18744">
+  <suite started-at="2021-08-30T19:12:13 IST" name="Default suite" finished-at="2021-08-30T19:12:17 IST" duration-ms="3272">
     <groups>
     </groups>
-    <test started-at="2021-08-29T22:16:45 IST" name="Default test" finished-at="2021-08-29T22:17:03 IST" duration-ms="18744">
-      <class name="E2EcargoProject.EcargoLoginpage_Test">
-        <test-method is-config="true" signature="Intialize()[pri:0, instance:E2EcargoProject.EcargoLoginpage_Test@366ef90e]" started-at="2021-08-29T22:16:45 IST" name="Intialize" finished-at="2021-08-29T22:17:02 IST" duration-ms="17720" status="PASS">
+    <test started-at="2021-08-30T19:12:13 IST" name="Default test" finished-at="2021-08-30T19:12:17 IST" duration-ms="3272">
+      <class name="E2EcargoProject.Pdfutil_Test">
+        <test-method signature="pdfTest()[pri:0, instance:E2EcargoProject.Pdfutil_Test@3e5499cc]" started-at="2021-08-30T19:12:13 IST" name="pdfTest" finished-at="2021-08-30T19:12:14 IST" duration-ms="561" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Intialize -->
-        <test-method signature="Bookingflow(java.util.HashMap)[pri:0, instance:E2EcargoProject.EcargoLoginpage_Test@366ef90e]" started-at="2021-08-29T22:17:03 IST" name="Bookingflow" data-provider="getData" finished-at="2021-08-29T22:17:03 IST" duration-ms="219" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{ExecutionFlag=Y,  Password=Skyadmin1!, Username=sky.admin}]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- pdfTest -->
+        <test-method signature="compareTwoPDFVisually()[pri:2, instance:E2EcargoProject.Pdfutil_Test@3e5499cc]" started-at="2021-08-30T19:12:14 IST" name="compareTwoPDFVisually" finished-at="2021-08-30T19:12:17 IST" duration-ms="2666" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Bookingflow -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:E2EcargoProject.EcargoLoginpage_Test@366ef90e]" started-at="2021-08-29T22:17:03 IST" name="teardown" finished-at="2021-08-29T22:17:03 IST" duration-ms="205" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- E2EcargoProject.EcargoLoginpage_Test -->
+        </test-method> <!-- compareTwoPDFVisually -->
+      </class> <!-- E2EcargoProject.Pdfutil_Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

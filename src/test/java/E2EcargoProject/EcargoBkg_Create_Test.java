@@ -40,7 +40,7 @@ import com.bkg.methods.libraries.Download_Uploadfile;
 
 
 
-public class EcargoBkgcreate_Test extends base {
+public class EcargoBkg_Create_Test extends base {
 
 	public WebDriver driver;
 	public  static Logger log =LogManager.getLogger(base.class.getName());
@@ -50,13 +50,12 @@ public class EcargoBkgcreate_Test extends base {
 	public void Intialize () throws IOException {
 		driver = Initializedriver();
 		log.info("Driver is Intialized");
-		driver.get(Prop.getProperty("uaturl"));	
-		
+		driver.get(Prop.getProperty("uaturl"));			
 				
 	}
 	
 	@Test
-	public void Bookingflow () throws IOException, InterruptedException, AWTException
+	public void Manual_Booking_Flow () throws IOException, InterruptedException, AWTException
 	{
 		Prop = new Properties();
 		FileInputStream Fis1 = new FileInputStream("D:\\Automation\\Project\\E2EcargoProject\\resources\\dataset.properties");
@@ -383,7 +382,7 @@ public class EcargoBkgcreate_Test extends base {
 		    	 
 		    	 js.executeScript("arguments[0].click()", EATab.AirwaybillPrint());
 			     Elogin.Waittilljquesryupdated(driver);	
-			     Thread.sleep(12000);
+			     Thread.sleep(8000);
 			       
 	              		 
 	              		ArrayList<String> tab2 = new ArrayList<String> (driver.getWindowHandles());
@@ -393,7 +392,7 @@ public class EcargoBkgcreate_Test extends base {
 	              	    System.out.println("New window has been opened.");
 	        			String newURL = driver.getCurrentUrl();	       			
 	        			log.info(newURL);			 	
-	        			String downloadfilepath = (System.getProperty("user.dir")+"\\Downloads\\ActualAirwaybill.pdf");						 				 	
+	        			String downloadfilepath = (System.getProperty("user.dir")+"\\Downloads\\ActualAirwaybill.pdf");					 				 	
 					 	Download_Uploadfile.Downloadfile(downloadfilepath);
 					 	 Thread.sleep(1000);				              	    
 		              	// driver.close();
@@ -511,7 +510,7 @@ public class EcargoBkgcreate_Test extends base {
 	    		
 	}
 	
-
+	@AfterTest
 
 public void teardown()
 {

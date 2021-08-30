@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="E2EcargoProject.EcargoLoginpage_Test">
+      <class name="E2EcargoProject.Pdfutil_Test">
         <methods>
-          <include name="teardown"/>
-          <include name="Bookingflow"/>
-          <include name="Intialize"/>
+          <include name="compareTwoPDFVisually"/>
+          <include name="pdfTest"/>
         </methods>
-      </class> <!-- E2EcargoProject.EcargoLoginpage_Test -->
+      </class> <!-- E2EcargoProject.Pdfutil_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -37,7 +37,7 @@ import com.bkg.bookingpageobjects.Elogin;
 		
 		@Test(dataProvider="getData")
 		
-		public void Browser (String Username ,String Password) throws IOException
+		public void Login_NegativeCase_Test (String Username ,String Password) throws IOException
 		{
 			
 			Elogin login = new Elogin(driver);		

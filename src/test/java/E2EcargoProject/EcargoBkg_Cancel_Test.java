@@ -24,7 +24,7 @@ import com.bkg.bookingpageobjects.EBookingverify;
 import com.bkg.bookingpageobjects.ELandingpage;
 import com.bkg.bookingpageobjects.Elogin;
 
-public class Booking_Cancel_Test extends base {
+public class EcargoBkg_Cancel_Test extends base {
 
 	public WebDriver driver;
 	public  static Logger log =LogManager.getLogger(base.class.getName());
@@ -37,8 +37,9 @@ public class Booking_Cancel_Test extends base {
 		driver.get(Prop.getProperty("uaturl"));	
 					
 	}
+	
 	@Test
-	public void Bookingflow () throws IOException, InterruptedException, AWTException
+	public void Booking_Cancel_Flow () throws IOException, InterruptedException, AWTException
 	{
 		Prop = new Properties();
 		FileInputStream Fis1 = new FileInputStream("D:\\Automation\\Project\\E2EcargoProject\\resources\\dataset.properties");

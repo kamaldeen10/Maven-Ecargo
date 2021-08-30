@@ -16,15 +16,14 @@ PDFUtil pu = new PDFUtil();
 	
 	String Expectedpdf = System.getProperty("user.dir")+"\\Uploadfile\\ExpectedAirwaybill.pdf";
 	
-	String Actualpdf =System.getProperty("user.dir")+"\\PdfActual\\ActualAirwaybill.pdf";
+	String Actualpdf = System.getProperty("user.dir")+"\\Downloads\\ActualAirwaybill.pdf";
 	
 	String Resultfile = System.getProperty("user.dir")+"\\PdfResult";
 	
 
 	@Test
 	public void pdfTest() throws IOException {	
-		
-		
+				
 		
 		pu.excludeText("65565570"+"\\d+");		
 			pu.excludeText("28/08/2021"+"\\d+");	
