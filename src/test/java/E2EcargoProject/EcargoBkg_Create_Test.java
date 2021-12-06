@@ -57,8 +57,8 @@ public class EcargoBkg_Create_Test extends base {
 	@Test
 	public void Manual_Booking_Flow () throws IOException, InterruptedException, AWTException
 	{
-		Prop = new Properties();
-		FileInputStream Fis1 = new FileInputStream("D:\\Automation\\Project\\E2EcargoProject\\resources\\dataset.properties");
+		Prop = new Properties();		
+		FileInputStream Fis1 = new FileInputStream(System.getProperty("user.dir")+"\\resources\\dataset.properties");		
 	    Prop.load(Fis1);
 	    String Username =Prop.getProperty("Username");	
 	    String Password =Prop.getProperty("Password");
@@ -87,6 +87,7 @@ public class EcargoBkg_Create_Test extends base {
 	 	    String Security =Prop.getProperty("Security");
 			    String Producttype =Prop.getProperty("Producttype");
 			    String SHC =Prop.getProperty("SHC");
+			    String SHCS =Prop.getProperty("SHCS");
 	    String Othercharge =Prop.getProperty("Othercharge");
 	   String Totaldue = Prop.getProperty("Totaldue");	
 	   String Shipper = Prop.getProperty("Shipper");	 
@@ -100,8 +101,8 @@ public class EcargoBkg_Create_Test extends base {
 		String TotalAmt_A = Prop.getProperty("TotalAmt_A");	 
 		String CostAmt_B = Prop.getProperty("CostAmt_B");
 		String Commission = Prop.getProperty("Commission");	 
-		String Margin = Prop.getProperty("Margin");
-	  	
+		String Margin = Prop.getProperty("Margin");	  	
+		String Comments = Prop.getProperty("Comments");
 	    	     
 		
 
@@ -223,11 +224,13 @@ public class EcargoBkg_Create_Test extends base {
 				  	js.executeScript("arguments[0].click()", bkg.SelectProducttype());	
 					log.info(bkg.SelectProducttype().getText());
 				  	System.out.println(bkg.SelectProducttype().getText());				  	
-				  	js.executeScript("arguments[0].click()", bkg.ShcTab());	
+				  //	js.executeScript("arguments[0].click()", bkg.ShcTab());	
 				  	//driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-					js.executeScript("arguments[0].click()", bkg.Shc1());
-					js.executeScript("arguments[0].click()", bkg.Shc2());
-					js.executeScript("arguments[0].click()", bkg.Shcsave());
+				  	
+				  	bkg.ShcEdit().sendKeys(SHCS);
+				//	js.executeScript("arguments[0].click()", bkg.Shc1());
+					//js.executeScript("arguments[0].click()", bkg.Shc2());
+				//	js.executeScript("arguments[0].click()", bkg.Shcsave());
 					
 				 
 					
@@ -382,7 +385,7 @@ public class EcargoBkg_Create_Test extends base {
 		    	 
 		    	 js.executeScript("arguments[0].click()", EATab.AirwaybillPrint());
 			     Elogin.Waittilljquesryupdated(driver);	
-			     Thread.sleep(8000);
+			     Thread.sleep(12000);
 			       
 	              		 
 	              		ArrayList<String> tab2 = new ArrayList<String> (driver.getWindowHandles());
@@ -391,7 +394,8 @@ public class EcargoBkg_Create_Test extends base {
 	              	    driver.switchTo().window(tab2.get(1));
 	              	    System.out.println("New window has been opened.");
 	        			String newURL = driver.getCurrentUrl();	       			
-	        			log.info(newURL);			 	
+	        			log.info(newURL);		        			
+	        			 Thread.sleep(3000);
 	        			String downloadfilepath = (System.getProperty("user.dir")+"\\Downloads\\ActualAirwaybill.pdf");					 				 	
 					 	Download_Uploadfile.Downloadfile(downloadfilepath);
 					 	 Thread.sleep(1000);				              	    
@@ -454,9 +458,12 @@ public class EcargoBkg_Create_Test extends base {
 				        
 					 	  Elogin.Waittilljquesryupdated(driver);	
 				         js.executeScript("arguments[0].click()",EPoTab.SaveEpouch());
-				         Elogin.Waittilljquesryupdated(driver);	
-				         Thread.sleep(5000);
-				      
+				         Elogin.Waittilljquesryupdated(driver);					         
+				         Thread.sleep(2000);
+				         EPoTab.Comments().sendKeys(Comments);
+				         Thread.sleep(2000);
+				         js.executeScript("arguments[0].click()", EPoTab.CommentsSave());
+				       Thread.sleep(12000);
 				         String Epouchverify = 	 EPoTab.VerifyEpouch().getText();
 						  log.info(Epouchverify);
 						    System.out.println(Epouchverify);						    
@@ -512,11 +519,12 @@ public class EcargoBkg_Create_Test extends base {
 	
 	@AfterTest
 
-public void teardown()
-{
-driver.close();	
+	public void teardown()
+	{
+	driver.close();	
 
-}
+	}
+	
 }
 
 

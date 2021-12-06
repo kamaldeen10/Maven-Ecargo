@@ -25,11 +25,11 @@ PDFUtil pu = new PDFUtil();
 	public void pdfTest() throws IOException {	
 				
 		
-		pu.excludeText("65565570"+"\\d+");		
-			pu.excludeText("28/08/2021"+"\\d+");	
+		//pu.excludeText("65565570"+"\\d+");		
+			pu.excludeText("18/09/2021"+"\\d+");	
 	
 			
-			pu.excludeText("\\d+");
+			//pu.excludeText("\\d+");
 			
 						
 	boolean isEquals = pu.compare(Expectedpdf, Actualpdf ,1 ,1);

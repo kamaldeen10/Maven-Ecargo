@@ -56,7 +56,7 @@ public class EBookingverify {
     WebElement Res_Verify_Destinationsearch ;
 	@FindBy(xpath="//descendant::div[contains(@class,'ui-grid-cell-contents ng-binding ng-scope') and contains(text(), 'MS5252')][1]")
     WebElement Res_Verify_Fligthsearch ;
-	@FindBy(xpath="//span[contains(@class,'ng-binding') and contains(text(), '28/08/2021')]")
+	@FindBy(xpath="//span[contains(@class,'ng-binding') and contains(text(), '01/09/2021')]")
     WebElement Res_Verify_FligthDatesearch ;
 	@FindBy(xpath="//descendant::span[contains(@class,'text-align-right ng-binding') and contains(text(), '15')]")
     WebElement Res_Verify_Piecesearch ;

@@ -99,12 +99,12 @@
                 </children>
               </children>
             </children>
-            <children xsi:type="basic:PartSashContainer" xmi:id="_itrvvggsEeydN_frxkMgGQ" containerData="7500">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_itrvvggsEeydN_frxkMgGQ" containerData="7500" selectedElement="_itrvxggsEeydN_frxkMgGQ">
               <children xsi:type="basic:PartSashContainer" xmi:id="_itrvvwgsEeydN_frxkMgGQ" containerData="7500" horizontal="true">
                 <children xsi:type="advanced:Placeholder" xmi:id="_itrvwAgsEeydN_frxkMgGQ" elementId="org.eclipse.ui.editorss" containerData="7500" ref="_its-GggsEeydN_frxkMgGQ"/>
-                <children xsi:type="basic:PartStack" xmi:id="_itrvwQgsEeydN_frxkMgGQ" elementId="right" containerData="2500" selectedElement="_itrvwggsEeydN_frxkMgGQ">
+                <children xsi:type="basic:PartStack" xmi:id="_itrvwQgsEeydN_frxkMgGQ" elementId="right" toBeRendered="false" containerData="2500">
                   <tags>org.eclipse.e4.secondaryNavigationStack</tags>
-                  <children xsi:type="advanced:Placeholder" xmi:id="_itrvwggsEeydN_frxkMgGQ" elementId="org.eclipse.ui.views.ContentOutline" ref="_its-UAgsEeydN_frxkMgGQ" closeable="true">
+                  <children xsi:type="advanced:Placeholder" xmi:id="_itrvwggsEeydN_frxkMgGQ" elementId="org.eclipse.ui.views.ContentOutline" toBeRendered="false" ref="_its-UAgsEeydN_frxkMgGQ" closeable="true">
                     <tags>View</tags>
                     <tags>categoryTag:General</tags>
                   </children>
@@ -128,11 +128,11 @@
                   <tags>View</tags>
                   <tags>categoryTag:General</tags>
                 </children>
-                <children xsi:type="advanced:Placeholder" xmi:id="_itrvyAgsEeydN_frxkMgGQ" elementId="org.eclipse.jdt.ui.JavadocView" ref="_its-SggsEeydN_frxkMgGQ" closeable="true">
+                <children xsi:type="advanced:Placeholder" xmi:id="_itrvyAgsEeydN_frxkMgGQ" elementId="org.eclipse.jdt.ui.JavadocView" toBeRendered="false" ref="_its-SggsEeydN_frxkMgGQ" closeable="true">
                   <tags>View</tags>
                   <tags>categoryTag:Java</tags>
                 </children>
-                <children xsi:type="advanced:Placeholder" xmi:id="_itrvyQgsEeydN_frxkMgGQ" elementId="org.eclipse.jdt.ui.SourceView" ref="_its-SwgsEeydN_frxkMgGQ" closeable="true">
+                <children xsi:type="advanced:Placeholder" xmi:id="_itrvyQgsEeydN_frxkMgGQ" elementId="org.eclipse.jdt.ui.SourceView" toBeRendered="false" ref="_its-SwgsEeydN_frxkMgGQ" closeable="true">
                   <tags>View</tags>
                   <tags>categoryTag:Java</tags>
                 </children>
@@ -247,14 +247,26 @@
     <sharedElements xsi:type="basic:Part" xmi:id="_its-SggsEeydN_frxkMgGQ" elementId="org.eclipse.jdt.ui.JavadocView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Javadoc" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/eview16/javadoc.png" tooltip="" closeable="true">
       <persistedState key="originalCompatibilityViewClass" value="org.eclipse.jdt.internal.ui.infoviews.JavadocView"/>
       <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.jdt.ui"/>
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:Java</tags>
+      <menus xmi:id="_0IaSUBhgEeyXk4665bJryw" elementId="org.eclipse.jdt.ui.JavadocView">
+        <tags>ViewMenu</tags>
+        <tags>menuContribution:menu</tags>
+      </menus>
+      <toolbar xmi:id="_0IaSURhgEeyXk4665bJryw" elementId="org.eclipse.jdt.ui.JavadocView" visible="false"/>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_its-SwgsEeydN_frxkMgGQ" elementId="org.eclipse.jdt.ui.SourceView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Declaration" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/eview16/source.png" tooltip="" closeable="true">
       <persistedState key="originalCompatibilityViewClass" value="org.eclipse.jdt.internal.ui.infoviews.SourceView"/>
       <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.jdt.ui"/>
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:Java</tags>
+      <menus xmi:id="_zsnuMBhgEeyXk4665bJryw" elementId="org.eclipse.jdt.ui.SourceView">
+        <tags>ViewMenu</tags>
+        <tags>menuContribution:menu</tags>
+      </menus>
+      <toolbar xmi:id="_zsnuMRhgEeyXk4665bJryw" elementId="org.eclipse.jdt.ui.SourceView" visible="false"/>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_its-TAgsEeydN_frxkMgGQ" elementId="org.eclipse.search.ui.views.SearchView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Search" iconURI="platform:/plugin/org.eclipse.search/icons/full/eview16/searchres.png" tooltip="" closeable="true">
       <persistedState key="originalCompatibilityViewClass" value="org.eclipse.search2.internal.ui.SearchView"/>
@@ -290,7 +302,7 @@
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
       </menus>
-      <toolbar xmi:id="_its-WAgsEeydN_frxkMgGQ" elementId="org.eclipse.ui.views.ContentOutline"/>
+      <toolbar xmi:id="_its-WAgsEeydN_frxkMgGQ" elementId="org.eclipse.ui.views.ContentOutline" visible="false"/>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_its-WQgsEeydN_frxkMgGQ" elementId="org.eclipse.ui.texteditor.TemplatesView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Templates" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/eview16/templates.png" tooltip="" closeable="true">
       <persistedState key="originalCompatibilityViewClass" value="org.eclipse.ui.texteditor.templates.TemplatesView"/>
@@ -335,7 +347,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_its-YggsEeydN_frxkMgGQ" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_QnoOYAjeEeygNLAObm5ywg" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_itwoTQgsEeydN_frxkMgGQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_WDBzIBhgEeyXk4665bJryw" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_itwoTQgsEeydN_frxkMgGQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_its-bwgsEeydN_frxkMgGQ" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -363,7 +375,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_its-qwgsEeydN_frxkMgGQ" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_Qnsf0AjeEeygNLAObm5ywg" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_itwCtwgsEeydN_frxkMgGQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_WDE2cBhgEeyXk4665bJryw" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_itwCtwgsEeydN_frxkMgGQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_its-tggsEeydN_frxkMgGQ" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>

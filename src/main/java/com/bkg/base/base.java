@@ -15,6 +15,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 
 
 public class base {
@@ -41,8 +43,10 @@ public class base {
 	
 	if (browserName.equals("chrome"))
 	{
-		System.setProperty("webdriver.chrome.driver",(System.getProperty("user.dir")+"\\driver\\chromedriver.exe"));	
-		 driver = new ChromeDriver();
+		System.setProperty("webdriver.chrome.driver",(System.getProperty("user.dir")+"\\driver\\chromedriver_95.exe"));	
+		// driver = new ChromeDriver();
+		//.chromedriver().setup();
+		driver = new ChromeDriver();
 		 driver.manage().window().maximize();	
 		 driver.manage().deleteAllCookies();
 		 driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
@@ -63,7 +67,6 @@ public class base {
 		}
 	
 		
-	
 	
 	public String getScreenShotPath2(String testCaseName, WebDriver driver) throws IOException
 	{
@@ -89,7 +92,6 @@ public class base {
 		
 	  } 
 	
-
 
 
 	

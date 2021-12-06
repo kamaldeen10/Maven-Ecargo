@@ -127,6 +127,7 @@ public class Booking_Flow_Test  extends base{
 		
 
 		 js.executeScript("arguments[0].click()", bkg.AddFlightab1());
+		 
 		 Elogin.Waittilljquesryupdated(driver);
 			bkg.roworigin1().clear();
 			bkg.roworigin1().sendKeys(testdata.get("Origin_1"));
@@ -414,7 +415,7 @@ System.out.println("Booking status  is " + BkgStatus1);
 	     act.sendKeys(Keys.TAB).build().perform();
 	     act.sendKeys(Keys.TAB).build().perform();
 	     act.sendKeys(Keys.ENTER).build().perform();
-	     
+	
 	     Thread.sleep(5000);
         Runtime.getRuntime().exec("D:\\Automation\\Project\\Autoit\\Epouch.exe");
         Elogin.Waittilljquesryupdated(driver);	

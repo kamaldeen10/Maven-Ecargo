@@ -135,10 +135,13 @@ public class EBookingCreate {
 	
 	@FindBy(xpath="//md-icon[(@ng-click= 'showSHC(tab)')]")
 	WebElement ShcTab;
-	@FindBy(xpath="//descendant::md-checkbox[@ng-model='shc.checked'][3]")
+	@FindBy(xpath="//descendant::md-checkbox[@ng-model='shc.checked'][2]")
 	WebElement Shc1;
-	@FindBy(xpath="//descendant::md-checkbox[@ng-model='shc.checked'][15]")
+	@FindBy(xpath="//descendant::md-checkbox[@ng-model='shc.checked'][14]")
 	WebElement Shc2;
+	@FindBy(xpath="//md-input-container//input[@ng-model='tab.createRequest.shc']")
+	WebElement ShcEdit;
+	
 	@FindBy(xpath="//button[@ng-click='saveSHC()']")
 	WebElement Shcsave;
 	
@@ -185,6 +188,11 @@ public class EBookingCreate {
 	
 	@FindBy(xpath="//md-icon[@ng-click='removeTab($event)']")
 	WebElement BookingAwbclose;
+	
+	public WebElement ShcEdit()
+	{
+		return ShcEdit;
+	}
 	
 public WebElement CreateTab()
 {

@@ -27,6 +27,23 @@ public class EEpouchTab {
 	WebElement SaveEpouch;
 	@FindBy(xpath="//descendant::div[contains(@class,'ui-grid-cell-contents ng-binding ng-scope') and contains(text(), 'Airwaybill copy')]")
 	WebElement VerifyEpouch;
+	
+	@FindBy(xpath="//md-input-container//textarea[@ng-model='comments']")
+	WebElement Comments;
+	
+	@FindBy(xpath="//div[contains(@class,'align-items-center booking-popup-bm layout-row')]// button[@ng-click='save()']")
+	WebElement CommentsSave;
+	
+
+	public WebElement Comments()
+	{
+		return Comments;
+	}
+	public WebElement CommentsSave()
+	{
+		return CommentsSave;
+	}
+	
 	public WebElement EpouchTab()
 	{
 		return EpouchTab;

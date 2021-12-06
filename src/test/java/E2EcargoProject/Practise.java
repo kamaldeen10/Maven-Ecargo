@@ -1,5 +1,6 @@
 package E2EcargoProject;
 
+import java.awt.AWTException;
 import java.io.IOException;
 import java.net.SocketTimeoutException;
 import java.util.ArrayList;
@@ -11,13 +12,22 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
+
+import com.bkg.methods.libraries.Download_Uploadfile;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Practise {
 
-	static WebDriver driver = new ChromeDriver();
+	//static WebDriver driver = new ChromeDriver();
+	
+	static WebDriver  driver = new FirefoxDriver();
 
 	static WebDriverWait wait = new WebDriverWait(driver, 50);
 	static JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -27,8 +37,8 @@ public class Practise {
 	static String Username = "sky.admin";
 	static String Password = "Skyadmin1!";
 	static String Awb_Prefix = "077";
-	static String Awb_No = "12141220";
-	static String Full_AwbNo = "077-1214-1220";
+	static String Awb_No = "33333333";
+	static String Full_AwbNo = "077-3333-3333";
 	static String Agent  ="TESTAGENT";
 	static String Origin_1 = "CGN";
 	static String Destination_1 = "TLV";
@@ -42,8 +52,8 @@ public class Practise {
 	static String Delivery_Date = "07/07/2021";
 	static String Flight_1 ="MS5252";
 	static String Flight_2 = "MS6262";
-	static String Flight_Date_1 ="08/07/2021";
-	static String Flight_Date_2 ="08/07/2021";
+	static String Flight_Date_1 ="01/09/2021";
+	static String Flight_Date_2 ="01/09/2021";
 	static String Delivery_Point ="CGNUPS";
 	static String Producttype = "General Cargo";
 	static String Priority = "3";
@@ -86,10 +96,15 @@ public class Practise {
 	
 
 
-	public static void main(String[] args) throws InterruptedException, IOException {
-		   System.setProperty("webdriver.chromedriver","D:\\Automation\\chromedriver.exe");		
+	public static void main(String[] args) throws InterruptedException, IOException, AWTException {
+	//	System.setProperty("webdriver.chrome.driver",(System.getProperty("user.dir")+"\\driver\\chromedriver_93.exe"));
+		//System.setProperty("webdriver.chrome.driver",(System.getProperty("user.dir")+"\\driver\\chromedriver_95.exe"));	
 			
-			//System.setProperty("webdriver.gecko.driver", "D:\\Automation\\geckodriver.exe");
+	//System.setProperty("webdriver.gecko.driver", "D:\\Automation\\geckodriver.exe");
+		System.setProperty("webdriver.chrome.driver", "D:\\chromedrivers\\chromedriver_95.exe");
+		
+	//	WebDriverManager.chromedriver().setup();
+
 			driver.manage().window().maximize();
 					
 				
@@ -144,15 +159,14 @@ public class Practise {
             	WebElement Awbsearch =  driver.findElement(By.xpath("//div[contains(@class,'ui-grid-cell-contents ng-binding ng-scope') and contains(text(), Full_AwbNo )]"));
            	 js.executeScript("arguments[0].click()", Awbsearch);
             	  
-          	WebElement CTab =  driver.findElement(By.xpath("//button[@ng-click='showCreateTab()']"));
-            js.executeScript("arguments[0].click()",  CTab);
-            Waittilljquesryupdated(driver);
-            Thread.sleep(8000);
-           	WebElement remo =  driver.findElement(By.xpath("//md-icon[@ng-click='removeTab($event)']"));
-         	 js.executeScript("arguments[0].click()",  remo); 
+          	//WebElement CTab =  driver.findElement(By.xpath("//button[@ng-click='showCreateTab()']"));
+           // js.executeScript("arguments[0].click()",  CTab);
+           // Waittilljquesryupdated(driver);
+          //  Thread.sleep(8000);
+          // 	WebElement remo =  driver.findElement(By.xpath("//md-icon[@ng-click='removeTab($event)']"));
+         //	 js.executeScript("arguments[0].click()",  remo); 
          	 Thread.sleep(8000);
-                	driver.findElement(By.xpath("//div[contains(@class,'ui-grid-cell-contents ng-binding ng-scope') and contains(text(),  Full_AwbNo)]")).click();
-           	Thread.sleep(8000);
+               
            	
          //   ArrayList tabs1 = new ArrayList<String> (driver.getWindowHandles());
             
@@ -175,8 +189,25 @@ public class Practise {
    		 
    		 WebElement n =		driver.findElement(By.xpath("//div//button[@ng-click='generateBookingAwbReport(tab)']"));
 		  js.executeScript("arguments[0].click()", n);
-		 Thread.sleep(8000);
+		 Thread.sleep(16000);
 		 
+		 ArrayList<String> tab2 = new ArrayList<String> (driver.getWindowHandles());
+
+   		System.out.println(tab2.size());
+   		
+   	    driver.switchTo().window(tab2.get(1));
+   	    System.out.println("New window has been opened.");
+			String newURL = driver.getCurrentUrl();	       			
+			System.out.println(newURL);			 	
+			String downloadfilepath = (System.getProperty("user.dir")+"\\Downloads\\vActualAirwaybill11.pdf");					 				 	
+		 	Download_Uploadfile.Downloadfile(downloadfilepath);
+		 	 Thread.sleep(1000);				              	    
+       	// driver.close();
+       	 driver.switchTo().window(tab2.get(0));
+       	 Thread.sleep(5000);
+       	 WebElement h =		driver.findElement(By.xpath("//md-pagination-wrapper//md-tab-item[contains(@class,'md-tab ng-scope ng-isolate-scope') and contains(text(), 'Pricing')]"));
+    	 js.executeScript("arguments[0].click()",  h );
+		 /*
 		 ArrayList<String> newTab = new ArrayList<String>(driver.getWindowHandles());
 		    newTab.remove(WinHan);
 		    // change focus to new tab
@@ -189,7 +220,7 @@ public class Practise {
 			 
 		actions.sendKeys(Keys.ENTER).build().perform();
    		 
-		driver.switchTo().window(WinHan);
+		driver.switchTo().window(WinHan); */
    		 
 }
 }

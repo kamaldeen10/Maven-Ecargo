@@ -42,7 +42,7 @@ public class EcargoBkg_Cancel_Test extends base {
 	public void Booking_Cancel_Flow () throws IOException, InterruptedException, AWTException
 	{
 		Prop = new Properties();
-		FileInputStream Fis1 = new FileInputStream("D:\\Automation\\Project\\E2EcargoProject\\resources\\dataset.properties");
+		FileInputStream Fis1 = new FileInputStream(System.getProperty("user.dir")+"\\resources\\dataset.properties");	
 	    Prop.load(Fis1);
 	    String Username =Prop.getProperty("Username");	
 	    String Password =Prop.getProperty("Password");
